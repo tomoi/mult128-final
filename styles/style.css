@@ -1,1 +1,49 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: #3c3c3c;
+}
+#navbar a {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #3c3c3c;
+  text-decoration: none;
+  color: white;
+  transition-duration: 300ms;
+}
+#navbar a:hover {
+  background-color: grey;
+}
+@media only screen and (max-width: 650px) {
+  #navbar {
+    display: none;
+    flex-flow: column nowrap;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    width: auto;
+  }
+  #navbar a {
+    border: 1px solid black;
+  }
+}
+
+nav img {
+  display: none;
+  height: 30px;
+}
+@media only screen and (max-width: 650px) {
+  nav img {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
