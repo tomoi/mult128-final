@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+//Weight is value from 300-900
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
 #navbar {
     display: flex;
     flex-flow: row nowrap;
@@ -12,6 +20,10 @@
     align-items: center;
     width: 100%;
     background-color: #3c3c3c;
+
+    .active {
+        background-color: #595959;
+    }
 
     a {
         display: block;

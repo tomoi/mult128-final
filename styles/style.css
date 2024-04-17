@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 #navbar {
   display: flex;
   flex-flow: row nowrap;
@@ -12,6 +19,9 @@
   align-items: center;
   width: 100%;
   background-color: #3c3c3c;
+}
+#navbar .active {
+  background-color: #595959;
 }
 #navbar a {
   display: block;
