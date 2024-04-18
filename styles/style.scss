@@ -1,3 +1,9 @@
+$main-dark: #2f4d38;
+$main-light: #b3f3be;
+$second-dark: #29322f;
+$second-light: #85cab0;
+$rich-black: #010203;
+
 * {
     margin: 0;
     padding: 0;
@@ -10,31 +16,37 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    background-color: $rich-black;
+    color: white;
 }
 
 #navbar {
+    padding-left: 2rem;
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    background-color: #3c3c3c;
+    background-color: $main-dark;
+    font-weight: 600;
+    font-size: 120%;
 
     .active {
-        background-color: #595959;
+        border-bottom: 3px inset $second-light;
+        border-left: 3px inset $second-light;
     }
 
     a {
         display: block;
         padding: 1rem 2rem;
-        background-color: #3c3c3c;
+        background-color: $main-dark;
         text-decoration: none;
-        color: white;
+        color: $main-light;
         transition-duration: 300ms;
 
         &:hover {
-            background-color: grey;
+            background-color: $second-dark;
         }
     }
 
@@ -45,8 +57,10 @@ body {
         flex-flow: column nowrap;
         position: absolute;
         left: 0px;
-        top: 30px;
+        top: 70px;
         width: auto;
+        padding-left: 0;
+
 
         a {
             border: 1px solid black;
@@ -54,11 +68,19 @@ body {
     }
 }
 
-nav img {
+#mobile-nav {
     display: none;
-    height: 30px;
+    height: 70px;
 
     @media only screen and (max-width: 650px) {
         display: block;
+        padding: 0.7rem;
+        //filter to change the colour to the main-light colour
+        filter: invert(94%) sepia(5%) saturate(2213%) hue-rotate(68deg) brightness(100%) contrast(92%);
     }
+}
+
+nav {
+    background-color: $main-dark;
+
 }
