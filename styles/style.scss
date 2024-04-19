@@ -10,6 +10,11 @@ $rich-black: #010203;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: $main-light;
+}
+
 //Weight is value from 300-900
 body {
     font-family: "Rubik", sans-serif;
@@ -18,6 +23,11 @@ body {
     font-style: normal;
     background-color: $rich-black;
     color: $main-light;
+    min-width: 370px;
+}
+
+body :not(nav) {
+    max-width: 1300px;
 }
 
 #navbar {
@@ -31,6 +41,8 @@ body {
     background-color: $main-dark;
     font-weight: 600;
     font-size: 120%;
+    margin: 0 auto;
+    z-index: 1000002;
 
     .active::before {
         content: "";
@@ -74,7 +86,7 @@ body {
 
 
         a {
-            border: 1px solid black;
+            border-bottom: 1px solid black;
         }
     }
 }
@@ -96,7 +108,9 @@ nav {
 }
 
 header {
-    margin: 2rem;
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 
     h1 {
         font-size: 500%;
@@ -108,22 +122,61 @@ header {
     }
 
     p {
-        margin-top: 1rem;
-        background-color: $second-dark;
-        border-radius: 10px;
+        margin-top: 0.5rem;
         width: fit-content;
         padding: 0.5rem 1rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 100%;
     }
 }
 
 #home-main {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 2rem;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem 2rem;
+
+    div.business-links {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-self: start;
+        row-gap: 1rem;
+        justify-content: space-around;
+
+        a {
+            background-color: $second-light;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            border-radius: 5px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            column-gap: 2rem;
+            text-decoration: none;
+            color: $second-dark;
+            font-weight: 500;
+            font-size: 150%;
+            border: 4px solid $second-light;
+            transition-duration: 300ms;
+
+            &:hover {
+                border: 4px solid $main-dark;
+                transition-duration: 300ms;
+            }
+        }
+
+        img {
+            height: 50px;
+        }
+    }
 
     @media only screen and (max-width: 670px) {
         display: flex;
         flex-flow: column nowrap;
+        gap: 1rem;
     }
 }
 
@@ -132,7 +185,12 @@ main {
         background-color: $second-dark;
         border-radius: 5px;
     }
+
     p {
         margin: 0.5rem 1rem;
     }
+}
+
+.center {
+    margin: 0 auto;
 }

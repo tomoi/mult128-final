@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #b3f3be;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
@@ -11,6 +16,11 @@ body {
   font-style: normal;
   background-color: #010203;
   color: #b3f3be;
+  min-width: 370px;
+}
+
+body :not(nav) {
+  max-width: 1300px;
 }
 
 #navbar {
@@ -24,6 +34,8 @@ body {
   background-color: #2f4d38;
   font-weight: 600;
   font-size: 120%;
+  margin: 0 auto;
+  z-index: 1000002;
 }
 #navbar .active::before {
   content: "";
@@ -62,7 +74,7 @@ body {
     padding-left: 0;
   }
   #navbar a {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
   }
 }
 
@@ -83,7 +95,9 @@ nav {
 }
 
 header {
-  margin: 2rem;
+  margin: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 header h1 {
   font-size: 500%;
@@ -95,23 +109,58 @@ header h1 {
   }
 }
 header p {
-  margin-top: 1rem;
-  background-color: #29322f;
-  border-radius: 10px;
+  margin-top: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
 }
+header img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 100%;
+}
 
 #home-main {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  margin: 2rem;
+  grid-template-columns: 1fr 2fr;
+  margin: 1rem 2rem;
+}
+#home-main div.business-links {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-self: start;
+  row-gap: 1rem;
+  justify-content: space-around;
+}
+#home-main div.business-links a {
+  background-color: #85cab0;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  text-decoration: none;
+  color: #29322f;
+  font-weight: 500;
+  font-size: 150%;
+  border: 4px solid #85cab0;
+  transition-duration: 300ms;
+}
+#home-main div.business-links a:hover {
+  border: 4px solid #2f4d38;
+  transition-duration: 300ms;
+}
+#home-main div.business-links img {
+  height: 50px;
 }
 @media only screen and (max-width: 670px) {
   #home-main {
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
   }
 }
 
@@ -121,4 +170,8 @@ main aside {
 }
 main p {
   margin: 0.5rem 1rem;
+}
+
+.center {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
