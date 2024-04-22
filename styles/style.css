@@ -96,8 +96,6 @@ nav {
 
 header {
   margin: 1rem 2rem;
-  display: grid;
-  grid-template-columns: 4fr 1fr;
 }
 header h1 {
   font-size: 500%;
@@ -128,9 +126,10 @@ header img {
 #home-main div.business-links {
   display: flex;
   flex-flow: column nowrap;
-  justify-self: start;
+  justify-self: center;
   row-gap: 1rem;
   justify-content: space-around;
+  width: 80%;
 }
 #home-main div.business-links a {
   background-color: #85cab0;
@@ -140,8 +139,8 @@ header img {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
   text-decoration: none;
   color: #29322f;
   font-weight: 500;
@@ -155,6 +154,11 @@ header img {
 }
 #home-main div.business-links img {
   height: 50px;
+}
+@media only screen and (max-width: 670px) {
+  #home-main div.business-links {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 670px) {
   #home-main {
@@ -171,7 +175,50 @@ main aside {
 main p {
   margin: 0.5rem 1rem;
 }
+main a {
+  text-decoration: underline;
+}
 
 .center {
   margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4%;
+  margin: 0 1rem;
+  position: relative;
+}
+.cards div {
+  background-color: #29322f;
+  padding: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  position: relative;
+  transition-duration: 200ms;
+}
+.cards div:hover {
+  margin-top: 10px;
+  transition-duration: 200ms;
+}
+.cards div:active {
+  margin-top: 5px;
+  transition-duration: 100ms;
+}
+.cards img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card-content {
+  margin: 1rem 2rem;
+}
+.card-content img {
+  width: 100%;
+}
+
+#card-content-1, #card-content-2, #card-content-3 {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

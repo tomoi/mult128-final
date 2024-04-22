@@ -3,6 +3,8 @@ $main-light: #b3f3be;
 $second-dark: #29322f;
 $second-light: #85cab0;
 $rich-black: #010203;
+$small-break: 670px;
+$medium-break: 820px;
 
 * {
     margin: 0;
@@ -64,7 +66,7 @@ body :not(nav) {
         transition-duration: 300ms;
         position: relative;
 
-        @media only screen and (max-width: 820px) {
+        @media only screen and (max-width: $medium-break) {
             padding: 1rem 1rem;
         }
 
@@ -75,7 +77,7 @@ body :not(nav) {
 
 
 
-    @media only screen and (max-width: 670px) {
+    @media only screen and (max-width: $small-break) {
         display: none;
         flex-flow: column nowrap;
         position: absolute;
@@ -95,7 +97,7 @@ body :not(nav) {
     display: none;
     height: 70px;
 
-    @media only screen and (max-width: 670px) {
+    @media only screen and (max-width: $small-break) {
         display: block;
         padding: 0.7rem;
         //filter to change the colour to the main-light colour
@@ -109,14 +111,12 @@ nav {
 
 header {
     margin: 1rem 2rem;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
 
     h1 {
         font-size: 500%;
         font-weight: 400;
 
-        @media only screen and (max-width: 670px) {
+        @media only screen and (max-width: $small-break) {
             font-size: 250%;
         }
     }
@@ -142,10 +142,10 @@ header {
     div.business-links {
         display: flex;
         flex-flow: column nowrap;
-        justify-self: start;
+        justify-self: center;
         row-gap: 1rem;
         justify-content: space-around;
-
+        width: 80%;
         a {
             background-color: $second-light;
             padding: 1rem 2rem;
@@ -154,7 +154,7 @@ header {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            column-gap: 2rem;
+            column-gap: 20%;
             text-decoration: none;
             color: $second-dark;
             font-weight: 500;
@@ -171,9 +171,13 @@ header {
         img {
             height: 50px;
         }
+
+        @media only screen and (max-width: $small-break) {
+            width: 100%;
+        }
     }
 
-    @media only screen and (max-width: 670px) {
+    @media only screen and (max-width: $small-break) {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
@@ -189,8 +193,53 @@ main {
     p {
         margin: 0.5rem 1rem;
     }
+    a {
+        text-decoration: underline;
+    }
 }
 
 .center {
     margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4%;
+    margin: 0 1rem;
+    position: relative;
+
+    div {
+        background-color: $second-dark;
+        padding: 1rem;
+        height: fit-content;
+        border-radius: 1rem;
+        position: relative;
+        transition-duration: 200ms;
+
+        &:hover {
+            margin-top: 10px;
+            transition-duration: 200ms;
+        }
+        &:active {
+            margin-top: 5px;
+            transition-duration: 100ms;
+        }
+    }
+
+    img {
+        width: 100%;
+        border-radius: 1rem;
+    }
+}
+
+.card-content {
+    margin: 1rem 2rem;
+    img {
+        width: 100%;
+    }
+}
+
+#card-content-1, #card-content-2, #card-content-3 {
+    display: none;
 }
