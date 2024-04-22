@@ -209,6 +209,15 @@ main {
     margin: 0 1rem;
     position: relative;
 
+    .card-arrow::after {
+        content: "";
+        background: url("../media/arrow_downward_FILL0_wght400_GRAD0_opsz24.svg");
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        display: inline-block;
+    }
+
     div {
         background-color: $second-dark;
         padding: 1rem;

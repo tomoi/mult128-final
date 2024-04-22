@@ -190,6 +190,14 @@ main a {
   margin: 0 1rem;
   position: relative;
 }
+.cards .card-arrow::after {
+  content: "";
+  background: url("../media/arrow_downward_FILL0_wght400_GRAD0_opsz24.svg");
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  display: inline-block;
+}
 .cards div {
   background-color: #29322f;
   padding: 1rem;
