@@ -202,6 +202,7 @@ main a {
 .cards div:hover {
   margin-top: 10px;
   transition-duration: 200ms;
+  cursor: pointer;
 }
 .cards div:active {
   margin-top: 5px;
@@ -210,6 +211,19 @@ main a {
 .cards img {
   width: 100%;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 820px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .cards {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 2rem;
+    gap: 1rem;
+  }
 }
 
 .card-content {

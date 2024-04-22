@@ -220,6 +220,7 @@ main {
         &:hover {
             margin-top: 10px;
             transition-duration: 200ms;
+            cursor: pointer;
         }
         &:active {
             margin-top: 5px;
@@ -230,6 +231,17 @@ main {
     img {
         width: 100%;
         border-radius: 1rem;
+    }
+
+    @media only screen and (max-width: $medium-break) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: $small-break) {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0 2rem;
+        gap: 1rem;
     }
 }
 
