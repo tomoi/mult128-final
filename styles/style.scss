@@ -170,6 +170,7 @@ header {
 
         img {
             height: 50px;
+            filter: brightness(0%);
         }
 
         @media only screen and (max-width: $small-break) {
@@ -265,4 +266,50 @@ main {
 
 #card-content-1, #card-content-2, #card-content-3 {
     display: none;
+}
+
+#pictures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 0 2rem;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    #image1 {
+        grid-column: 1 / span 3;
+    }
+
+    #image2 {
+        grid-row: 1 / span 2;
+        grid-column: 4 / span 2;
+    }
+
+    #image3 {
+        grid-row: 2 / span 4;
+        grid-column: 1 / span 3;
+    }
+
+    #image4 {
+        grid-row: 3 / span 3;
+        grid-column: 4 / span 2;
+    }
+
+    #image5 {
+        grid-column: 1 / span 5;
+    }
+
+    @media only screen and (max-width: $medium-break) {
+        
+    }
+
+    @media only screen and (max-width: $small-break) {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }

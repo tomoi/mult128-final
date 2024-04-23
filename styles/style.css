@@ -154,6 +154,7 @@ header img {
 }
 #home-main div.business-links img {
   height: 50px;
+  filter: brightness(0%);
 }
 @media only screen and (max-width: 670px) {
   #home-main div.business-links {
@@ -245,4 +246,41 @@ main a {
 
 #card-content-1, #card-content-2, #card-content-3 {
   display: none;
+}
+
+#pictures {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin: 0 2rem;
+  justify-content: center;
+  align-items: center;
+}
+#pictures img {
+  width: 100%;
+  height: auto;
+}
+#pictures #image1 {
+  grid-column: 1/span 3;
+}
+#pictures #image2 {
+  grid-row: 1/span 2;
+  grid-column: 4/span 2;
+}
+#pictures #image3 {
+  grid-row: 2/span 4;
+  grid-column: 1/span 3;
+}
+#pictures #image4 {
+  grid-row: 3/span 3;
+  grid-column: 4/span 2;
+}
+#pictures #image5 {
+  grid-column: 1/span 5;
+}
+@media only screen and (max-width: 670px) {
+  #pictures {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }/*# sourceMappingURL=style.css.map */
