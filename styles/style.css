@@ -326,4 +326,35 @@ main a {
     margin: 0 2rem;
     gap: 1rem;
   }
+}
+
+#this-site {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+#this-site div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+  background-color: #29322f;
+  border-radius: 10px;
+  align-items: center;
+}
+@media only screen and (max-width: 670px) {
+  #this-site div {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 2rem;
+    gap: 1rem;
+  }
+}
+#this-site div img {
+  width: 100%;
+}
+@media only screen and (max-width: 670px) {
+  #this-site {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

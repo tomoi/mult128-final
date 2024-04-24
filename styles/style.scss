@@ -359,3 +359,34 @@ main {
         gap: 1rem;
     }
 }
+
+#this-site {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 0 2rem;
+
+    div {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 1rem;
+        background-color: $second-dark;
+        border-radius: 10px;
+        align-items: center;
+
+        @media only screen and (max-width: $small-break) {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 0 2rem;
+            gap: 1rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: $small-break) {
+        margin: 0;
+    }
+}
