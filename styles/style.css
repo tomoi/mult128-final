@@ -127,7 +127,8 @@ header img {
   aspect-ratio: 3/2;
   padding-top: 2rem;
 }
-#main-hero h1, #main-hero p {
+#main-hero h1,
+#main-hero p {
   background-color: rgba(0, 0, 0, 0.4901960784);
   width: -moz-fit-content;
   width: fit-content;
@@ -345,6 +346,17 @@ main a {
   height: 100vh;
   font-size: 300%;
   border-radius: 50%;
+}
+#about .links a {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 200%;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#about .links img {
+  width: 50px;
 }
 @media only screen and (max-width: 670px) {
   #about {
