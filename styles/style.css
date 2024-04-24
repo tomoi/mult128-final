@@ -118,6 +118,31 @@ header img {
   border-radius: 100%;
 }
 
+#main-hero {
+  background-image: url("../photography/photos/IMG_0287-large.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0;
+  aspect-ratio: 3/2;
+  padding-top: 2rem;
+}
+#main-hero h1, #main-hero p {
+  background-color: rgba(0, 0, 0, 0.4901960784);
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-left: 1.5rem;
+}
+#main-hero h1 {
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+}
+#main-hero p {
+  border-radius: 5px;
+}
+
 #home-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -246,7 +271,9 @@ main a {
   width: 100%;
 }
 
-#card-content-1, #card-content-2, #card-content-3 {
+#card-content-1,
+#card-content-2,
+#card-content-3 {
   display: none;
 }
 
