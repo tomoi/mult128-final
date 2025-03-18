@@ -317,6 +317,7 @@ main a {
 }
 #this-site div h2 {
   margin-top: 1rem;
+  text-align: center;
 }
 #this-site div a {
   text-decoration: none;
