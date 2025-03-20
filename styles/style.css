@@ -302,9 +302,16 @@ main a {
   gap: 1rem;
   margin: 0 2rem;
 }
+@media only screen and (max-width: 670px) {
+  #this-site {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+  }
+}
 #this-site div {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   padding: 1rem;
   background-color: #29322f;
   border-radius: 10px;
@@ -338,7 +345,7 @@ main a {
 @media only screen and (max-width: 670px) {
   #this-site div {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column n;
     margin: 0 2rem;
     gap: 1rem;
   }
@@ -350,4 +357,34 @@ main a {
   #this-site {
     margin: 0;
   }
+}
+
+#threeD_page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+#threeD_page .threeD_card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #29322f;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+@media only screen and (max-width: 670px) {
+  #threeD_page .threeD_card {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+#threeD_page .threeD_card div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+#threeD_page .threeD_card img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

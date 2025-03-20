@@ -350,10 +350,15 @@ main {
     gap: 1rem;
     margin: 0 2rem;
 
+    @media only screen and (max-width: $small-break) {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
 
     div {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
         padding: 1rem;
         background-color: $second-dark;
         border-radius: 10px;
@@ -395,7 +400,7 @@ main {
 
         @media only screen and (max-width: $small-break) {
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: column n;
             margin: 0 2rem;
             gap: 1rem;
         }
@@ -407,5 +412,43 @@ main {
 
     @media only screen and (max-width: $small-break) {
         margin: 0;
+    }
+}
+
+
+#threeD_page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    .threeD_card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        background-color: $second-dark;
+        padding: 1rem;
+        margin: 1rem 2rem;
+        border-radius: 1rem;
+        gap: 1rem;
+        
+        @media only screen and (max-width: $small-break) {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        div {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 1rem;
+
+            // img {
+            //     width: 100%;
+            //     height: auto;
+            // }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
